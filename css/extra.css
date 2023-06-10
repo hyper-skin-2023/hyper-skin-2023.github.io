@@ -1,0 +1,44 @@
+.has-text-centered {
+    text-align: center!important
+}
+
+/* span {
+    padding-left: 1%;
+    font-style: inherit;
+    font-weight: inherit
+} */
+.link-block {
+    padding-left: 1%;
+    font-style: inherit;
+    font-weight: inherit
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+}
+
+.svg-inline--fa.fa-w-12 {
+    width: 0.75em;
+}
+
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+
+svg:not(:root) {
+    overflow-clip-margin: content-box;
+    overflow: hidden;
+}
+
+p{
+    text-align: justify;
+}
