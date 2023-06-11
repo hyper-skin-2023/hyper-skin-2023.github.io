@@ -70,7 +70,7 @@
                                 <a href="." class="nav-link">Home</a>
                             </li>
                             <li class="navitem">
-                                <a href="info/" class="nav-link">Info</a>
+                                <a href="dataset/" class="nav-link">Dataset</a>
                             </li>
                         </ul>
 
@@ -149,6 +149,7 @@ Pai Chet Ng<sup>1</sup>, Zhixiang Chi<sup>1</sup>, Yannick Verdie<sup>2</sup>, J
 <p>Introducing Hyper-Skin, a uniquely designed hyperspectral dataset aiming to revolutionize hyperspectral skin analysis on consumer devices. With spatial and spectral resolution of <span class="arithmatex">\(1024 \times 1024 \times 448\)</span>, Hyper-Skin offers an extensive collection of hyperspectral cubes, providing over a million spectra per image. A notable feature of Hyper-Skin is the inclusion of synthesized RGB images generated from 28 real camera response functions, enabling versatile experimental setups. 
 What sets Hyper-Skin apart is its comprehensive spectral coverage, including both the VIS and NIR spectrum, facilitating a holistic understanding of various aspects of human facial skin, enabling new possibilities for consumer applications to see beyond the visual appearance of their selfies and gain valuable insights into their skin's physiological characteristics, such as melanin and hemoglobin concentrations.
 With Hyper-Skin dataset, we aim to facilitate ongoing research in facial skin-spectra reconstruction on consumer devices, bringing affordable hyperspectral skin analysis directly to the consumer's fingertips.</p>
+<p><br></p>
 <h2 id="dataset-description">Dataset Description</h2>
 <p>The Hyper-Skin dataset consists of 306 hyperspectral data samples collected from 51 participants. Each participant contributed 6 images, covering 2 types of facial expressions and 3 different face poses. This diverse image collection ensures a broad representation of poses and facial expressions commonly encountered in selfies.
 The RAW hyperspectral data underwent radiometric calibration and were resampled into two distinct 31-band datasets. One dataset covers the visible spectrum, ranging from 400nm to 700nm, while the other dataset covers the near-infrared spectrum, ranging from 700nm to 1000nm. Additionally, synthetic RGB and Multispectral (MSI) data were generated, including RGB images and an infrared image at 960nm. The Hyper-Skin dataset comprises two types of data: (RGB, VIS) and (MSI, NIR), offering different needs in skin analysis and facilitates comprehensive investigations of various skin features.</p>
@@ -157,12 +158,27 @@ The RAW hyperspectral data underwent radiometric calibration and were resampled 
 <p>The visible spectrum data in the Hyper-Skin dataset allows for the analysis of surface-level skin characteristics, including melanin concentration, blood oxygenation, pigmentation, and vascularization. 
 Consider the scenario which only RGB image is available in the consumer device, we provide pair of (RGB, VIS) data for hyperspectral skin analysis. The goal is to reconstruct a 31-band hyperspectral cube in the visible (VIS) spectrum using the RGB image. 
 By reconstructing the hyperspectral cube, researchers can gain valuable insights into essential physiological properties of the skin, such as melanin and hemoglobin concentrations, which serve as important indicators of skin health.</p>
+<p><strong>Example of (RGB, VIS) Pair:</strong>
+<div>
+  <img style="max-width: 100%; max-height: 100%;" src="img/sampledata-vis.png" >
+  <p style='text-align: right; color: black;font-style: italic; font-size: small;'>
+      Images above are used with explicit consent from the participants and cannot be used elsewhere without prior consent.
+  </p>
+</div></p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Pair of (MSI, NIR) Data</p>
 <p>The near-infrared spectrum data included in the Hyper-Skin dataset facilitates the study of deeper tissue properties, such as water content, collagen content, subcutaneous blood vessels, and tissue oxygenation. 
 For many modern consumer cameras that are capable of providing both RGB and infrared image at 960nm, we provide a pair of (MSI, NIR), consists of multispectral (MSI) data of the RGB channels along with the infrared image and the 31-band hyperspectral cube in the near-infrared (NIR) spectrum. The objective is to reconstruct a 31-band hyperspectral cube, which can be used for a comprehensive examination of skin properties, including moisture content, blood flow, and characteristics of deeper tissues.</p>
+<p><strong>Example of (MSI, NIR) Pair:</strong>
+<div>
+  <img style="max-width: 100%; max-height: 100%;" src="img/sampledata-nir.png" >
+  <p style='text-align: right; color: black;font-style: italic; font-size: small;'>
+      Images above are used with explicit consent from the participants and cannot be used elsewhere without prior consent.
+  </p>
+</div></p>
 </div>
+<p><br></p>
 <h2 id="citation">Citation</h2>
 <p>If you used the dataset for your publication, kindly acknowledge and cite the following work:
 <div class="highlight"><pre><span></span><code>  @article{hs2013,
@@ -257,5 +273,5 @@ For many modern consumer cameras that are capable of providing both RGB and infr
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2023-06-10 21:42:35.795941+00:00
+Build Date UTC : 2023-06-11 03:21:43.553179+00:00
 -->
