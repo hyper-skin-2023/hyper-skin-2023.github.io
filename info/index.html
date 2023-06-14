@@ -36,10 +36,7 @@
     
     if (isMobileDevice) {
        document.write(" \
-       <img src='../img/gif/p002_neutral_front.gif' style='object-fit:cover; width:700px; height:480px'></img> \
-       <p style='text-align: right; color: aliceblue; margin-right: 3%;font-style: italic; font-size: small;'>\
-        Images above are used with explicit consent from the participants and cannot be used elsewhere without prior consent.\
-       </p>\
+       <div class='container></div>\
        ");
     } else {
        document.write("\
@@ -72,6 +69,9 @@
                             <li class="navitem">
                                 <a href="../dataset/" class="nav-link">Dataset</a>
                             </li>
+                            <li class="navitem">
+                                <a href="../exploration/" class="nav-link">Data Exploration</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
@@ -89,7 +89,7 @@
 
         <div class="container">
             <div class="row">
-    <div role="main">
+    <div style="display:block">
 
 <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
 <p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>

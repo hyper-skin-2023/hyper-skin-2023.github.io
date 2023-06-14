@@ -36,10 +36,7 @@
     
     if (isMobileDevice) {
        document.write(" \
-       <img src='img/gif/p002_neutral_front.gif' style='object-fit:cover; width:700px; height:480px'></img> \
-       <p style='text-align: right; color: aliceblue; margin-right: 3%;font-style: italic; font-size: small;'>\
-        Images above are used with explicit consent from the participants and cannot be used elsewhere without prior consent.\
-       </p>\
+       <div class='container></div>\
        ");
     } else {
        document.write("\
@@ -72,6 +69,9 @@
                             <li class="navitem">
                                 <a href="dataset/" class="nav-link">Dataset</a>
                             </li>
+                            <li class="navitem">
+                                <a href="exploration/" class="nav-link">Data Exploration</a>
+                            </li>
                         </ul>
 
                     <ul class="nav navbar-nav ml-auto">
@@ -89,7 +89,7 @@
 
         <div class="container">
             <div class="row">
-    <div role="main">
+    <div style="display:block">
 
 <h1 style="text-align: center; font-weight: bold; margin: 10px;">Hyper-Skin: A Hyperspectral Dataset for Reconstructing Facial Skin-Spectra from RGB Images</h1>
 <p style="text-align: center; font-size: small;">
@@ -114,7 +114,7 @@ Pai Chet Ng<sup>1</sup>, Zhixiang Chi<sup>1</sup>, Yannick Verdie<sup>2</sup>, J
 
         <!-- video -->
         <span class="link-block">
-          <a href="https://sizhean.github.io/mri" class="external-link button is-normal is-rounded is-dark">
+          <a href="." class="external-link button is-normal is-rounded is-dark">
             <span class="icon">
                 <svg class="svg-inline--fa fa-youtube fa-w-18" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg>
             </span>
@@ -147,12 +147,12 @@ Pai Chet Ng<sup>1</sup>, Zhixiang Chi<sup>1</sup>, Yannick Verdie<sup>2</sup>, J
 <hr />
 <h2 id="introduction">Introduction</h2>
 <p>Introducing Hyper-Skin, a uniquely designed hyperspectral dataset aiming to revolutionize hyperspectral skin analysis on consumer devices. With spatial and spectral resolution of <span class="arithmatex">\(1024 \times 1024 \times 448\)</span>, Hyper-Skin offers an extensive collection of hyperspectral cubes, providing over a million spectra per image. A notable feature of Hyper-Skin is the inclusion of synthesized RGB images generated from 28 real camera response functions, enabling versatile experimental setups. 
-What sets Hyper-Skin apart is its comprehensive spectral coverage, including both the VIS and NIR spectrum, facilitating a holistic understanding of various aspects of human facial skin, enabling new possibilities for consumer applications to see beyond the visual appearance of their selfies and gain valuable insights into their skin's physiological characteristics, such as melanin and hemoglobin concentrations.
+What sets Hyper-Skin apart is its comprehensive spectral coverage, including both the visible (VIS) spectrum spanning from <span class="arithmatex">\(400nm\)</span> to <span class="arithmatex">\(700nm\)</span> and near-infrared (NIR) spectrum from <span class="arithmatex">\(700nm\)</span> to <span class="arithmatex">\(1000nm\)</span>, facilitating a holistic understanding of various aspects of human facial skin, enabling new possibilities for consumer applications to see beyond the visual appearance of their selfies and gain valuable insights into their skin's physiological characteristics, such as melanin and hemoglobin concentrations.
 With Hyper-Skin dataset, we aim to facilitate ongoing research in facial skin-spectra reconstruction on consumer devices, bringing affordable hyperspectral skin analysis directly to the consumer's fingertips.</p>
 <p><br></p>
 <h2 id="dataset-description">Dataset Description</h2>
 <p>The Hyper-Skin dataset consists of 306 hyperspectral data samples collected from 51 participants. Each participant contributed 6 images, covering 2 types of facial expressions and 3 different face poses. This diverse image collection ensures a broad representation of poses and facial expressions commonly encountered in selfies.
-The RAW hyperspectral data underwent radiometric calibration and were resampled into two distinct 31-band datasets. One dataset covers the visible spectrum, ranging from 400nm to 700nm, while the other dataset covers the near-infrared spectrum, ranging from 700nm to 1000nm. Additionally, synthetic RGB and Multispectral (MSI) data were generated, including RGB images and an infrared image at 960nm. The Hyper-Skin dataset comprises two types of data: (RGB, VIS) and (MSI, NIR), offering different needs in skin analysis and facilitates comprehensive investigations of various skin features.</p>
+The RAW hyperspectral data underwent radiometric calibration and were resampled into two distinct 31-band datasets. One dataset covers the visible spectrum, ranging from 400nm to 700nm, while the other dataset covers the near-infrared spectrum, ranging from 700nm to 1000nm. Additionally, synthetic RGB and Multispectral (MSI) data were generated, including RGB images and an infrared image at 960nm. The Hyper-Skin dataset comprises two types of data: <strong>(RGB, VIS)</strong> and <strong>(MSI, NIR)</strong>, offering different needs in skin analysis and facilitates comprehensive investigations of various skin features.</p>
 <div class="admonition note">
 <p class="admonition-title">Pair of (RGB, VIS) Data</p>
 <p>The visible spectrum data in the Hyper-Skin dataset allows for the analysis of surface-level skin characteristics, including melanin concentration, blood oxygenation, pigmentation, and vascularization. 
@@ -181,7 +181,7 @@ For many modern consumer cameras that are capable of providing both RGB and infr
 <p><br></p>
 <h2 id="citation">Citation</h2>
 <p>If you used the dataset for your publication, kindly acknowledge and cite the following work:
-<div class="highlight"><pre><span></span><code>  @article{hs2013,
+<div class="highlight"><pre><span></span><code>  @misc{hs2013,
   title={Hyper-Skin: A Hyperspectral Dataset for Reconstructing Facial Skin-Spectra from RGB Images},
   author={Pai Chet Ng, Zhixiang Chi, Yannick Verdie, Juwei Lu, Konstantinos N. Plataniotis},
   year={2023}
@@ -273,5 +273,5 @@ For many modern consumer cameras that are capable of providing both RGB and infr
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2023-06-11 03:21:43.553179+00:00
+Build Date UTC : 2023-06-14 22:05:14.223172+00:00
 -->
